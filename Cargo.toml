@@ -1,26 +1,26 @@
 [package]
 name = "armature-collab"
-version = "0.3.0"
-edition.workspace = true
-rust-version.workspace = true
-authors.workspace = true
-license.workspace = true
+version = "0.5.0"
+edition = "2024"
+rust-version = "1.94.1"
+authors = ["Joseph Quinn <quinn.josephr@proton.me>"]
+license = "Apache-2.0"
 repository = "https://github.com/quinnjr/armature-collab"
-homepage.workspace = true
+homepage = "https://quinnjr.github.io/armature"
 description = "Real-time collaboration with CRDTs and Operational Transformation for Armature framework"
 keywords = ["crdt", "collaboration", "real-time", "ot", "sync"]
 categories = ["data-structures", "web-programming"]
 
 [dependencies]
-armature-core = { path = "../armature-core", version = "0" }
-armature-log = { path = "../armature-log", version = "0" }
-armature-websocket = { path = "../armature-websocket", version = "0", optional = true }
-tokio = { version = "1.52", features = ["rt-multi-thread", "sync", "time"] }
+armature-core = { version = "0.10" }
+armature-log = { version = "0.2" }
+armature-websocket = { version = "0.4", optional = true }
+tokio = { version = "1.53", features = ["rt-multi-thread", "sync", "time"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 async-trait = "0.1"
 thiserror = "2.0"
-uuid = { version = "1.23", features = ["v4", "serde"] }
+uuid = { version = "1.26", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
 dashmap = "6.2"
 parking_lot = "0.12"
