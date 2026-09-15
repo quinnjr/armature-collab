@@ -9,10 +9,13 @@ Earlier changes are recorded in the workspace [`CHANGELOG.md`](../CHANGELOG.md).
 
 ## [Unreleased]
 
-### Fixed
+## [0.5.0] - 2026-09-15
 
-- `LwwMap::remove` records a tombstone for a key the replica has not observed. A causally later removal delivered before its add was silently lost, breaking convergence.
-- `OperationBuffer::ready` uses a dependants index rather than repeated linear passes with mid-vector removal, and the unbounded `applied` set is documented with an opt-in limit.
+### Changed
+
+- **Breaking:** requires `armature-core` 0.10 (was `0.9`); its types appear in this crate's API, so the requirement change is breaking here and the minor moves. Part of the `armature-core` 0.10 release train.
+- **Breaking:** requires `armature-websocket` 0.4 (was `0.3`); its types appear in this crate's API, so the requirement change is breaking here and the minor moves. Part of the `armature-core` 0.10 release train.
+- Dependencies bumped to their latest releases: `tokio` 1.52 → 1.53, `uuid` 1.23 → 1.26.
 
 ## [0.4.0] - 2026-08-05
 
