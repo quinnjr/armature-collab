@@ -1,6 +1,6 @@
 [package]
 name = "armature-collab"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2024"
 rust-version = "1.94.1"
 authors = ["Joseph Quinn <quinn.josephr@proton.me>"]
@@ -12,9 +12,9 @@ keywords = ["crdt", "collaboration", "real-time", "ot", "sync"]
 categories = ["data-structures", "web-programming"]
 
 [dependencies]
-armature-core = { version = "0.10" }
-armature-log = { version = "0.2" }
-armature-websocket = { version = "0.4", optional = true }
+armature-core = { version = "0.11" }
+armature-log = { version = "0.3" }
+armature-websocket = { version = "0.5", optional = true }
 tokio = { version = "1.53", features = ["rt-multi-thread", "sync", "time"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
